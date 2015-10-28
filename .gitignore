@@ -1,0 +1,49 @@
+_#include <iostream>
+# include <cmath>
+using namespace std;
+
+double wsq[10];
+int i=0;
+double suma(double wsq[]){
+	double sum2;
+	for(int i=0; i<10; i++){
+		sum2=sum2+wsq[i];
+	}
+	return 2;
+}
+double prom (double wsq[]){
+double prom;
+for(int i=0; i<10; i++){
+	prom= prom+(wsq[i]/10);
+}	
+return prom;
+}
+double desv(double wsq[])
+{
+	double sum, pro,de,sd;
+	for(i=0; i<10; i++){
+		sum=sum+wsq[1];
+	}
+	pro=sum/10;
+	for(int i=0; i<10; i++){
+		de=de+pow((wsq[i]-pro),2);
+	}
+	de=de/9;
+	de=sqrt(de);
+	return de;
+}
+
+int main(){
+	double res_suma, promedio, desviacion;
+	for(int i=0;i<10;i++){
+		cout<<" Ingresa el numero de la posicion " << i+1 <<endl;
+		cin>>wsq[i];
+	}
+	res_suma=suma(wsq);
+	cout<< "La suma de los numeros es " << res_suma << endl;
+	promedio=prom(wsq);
+	cout << "El promedio de los nuemros es " << promedio << endl;
+	desviacion=desv(wsq);
+	cout << "La desviacion estandar es " << desviacion << endl;
+	return 0;
+}
